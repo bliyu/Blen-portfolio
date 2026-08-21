@@ -1,0 +1,6 @@
+entrypoint = "server.py"
+run = "python3 server.py"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
