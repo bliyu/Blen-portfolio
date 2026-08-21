@@ -1,4 +1,4 @@
-:HL["/Blen-portfolio/_next/static/chunks/0dhikrq25jg_e.css","style"]
+:HL["/Blen-portfolio/_next/static/chunks/13bheamu5qihp.css","style"]
 :HL["/Blen-portfolio/blen-avatar.jpg","image"]
 :HL["/Blen-portfolio/myo-dashboard.png","image"]
 :HL["/Blen-portfolio/myo-invoice.png","image"]
@@ -14,4 +14,4 @@
 :HL["/Blen-portfolio/weather.png","image"]
 :HL["/Blen-portfolio/farm-animals.png","image"]
 :HL["/Blen-portfolio/farm-history.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"csBO3tIp7YIe3TaZUwM-a"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"YJ59wg5RIFcw5rAFk9yUL"}
