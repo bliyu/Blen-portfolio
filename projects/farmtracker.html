@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf8f1">
+  <title>FarmTracker — Blen Abebe</title>
+  <meta name="description" content="Blen Abebe's FarmTracker assessment: auditing an existing application, fixing data-consistency defects, and delivering weight tracking across SQLite, a Node.js API, and the interface.">
+  <link rel="canonical" href="https://bliyu.github.io/Blen-portfolio/projects/farmtracker.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body data-page="case-study">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Blen Abebe home">blen<span class="wordmark-dot">.</span></a>
+      <a class="text-link" href="../index.html#work">Back to selected work <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main" class="case-page" tabindex="-1">
+    <div class="container case-hero">
+      <p class="eyebrow">Technical assessment / Full-stack development</p>
+      <h1 class="case-title">FarmTracker<span class="wordmark-dot">.</span></h1>
+      <p class="case-intro">Understand the existing system. Fix what matters. Deliver a complete feature.</p>
+      <dl class="case-meta">
+        <div><dt>My role</dt><dd>Full-stack assessment candidate</dd></div>
+        <div><dt>Context</dt><dd>Existing application · 2026</dd></div>
+        <div><dt>Built with</dt><dd>Node.js · SQLite · REST · JavaScript</dd></div>
+      </dl>
+      <figure class="case-cover">
+        <img src="../farm-animals.png" width="1622" height="656" alt="FarmTracker animal list showing animal tags, names, breeds, paddocks, health events, and pagination." fetchpriority="high">
+        <figcaption class="image-caption">The existing application I audited and extended during the assessment.</figcaption>
+      </figure>
+    </div>
+    <div class="container case-layout">
+      <aside class="case-sidebar" aria-label="Project details">
+        <p class="eyebrow">The focus</p>
+        <p>Make a small, existing application more reliable while delivering a new workflow end to end.</p>
+        <p class="eyebrow">Recorded assessment result</p>
+        <p><strong>17 / 17</strong> backend integration tests passing in the project submission.</p>
+        <a class="button button-dark" href="https://github.com/bliyu/CSFInternshipAssessment2026/tree/blen-fullstack-assessment/track2-fullstack" target="_blank" rel="noopener noreferrer">View the project <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://github.com/bliyu/CSFInternshipAssessment2026/blob/blen-fullstack-assessment/track2-fullstack/PR_DESCRIPTION.md" target="_blank" rel="noopener noreferrer">Read the implementation notes <span aria-hidden="true">↗</span></a>
+      </aside>
+      <article class="case-body" aria-label="FarmTracker case study">
+        <section class="case-section" aria-labelledby="context">
+          <p class="eyebrow">01 / The context</p>
+          <h2 id="context">Start by understanding what is already there.</h2>
+          <p>FarmTracker is a livestock-management application with animal records, paddocks, and health events. The assessment called for auditing the inherited codebase, addressing defects, and adding weight tracking across the backend and frontend.</p>
+          <p>I began with an audit of the data flow and existing behavior. Two immediate issues stood out: paddock occupancy could become inconsistent when an animal moved, and pagination treated a page number like a row offset.</p>
+        </section>
+        <section class="case-section" aria-labelledby="contribution">
+          <p class="eyebrow">02 / My contribution</p>
+          <h2 id="contribution">One feature, from storage to interaction.</h2>
+          <p>I corrected occupancy updates and pagination, then implemented the weight-history workflow:</p>
+          <ul>
+            <li>Added an <code>animal_weights</code> table with a positive-weight constraint.</li>
+            <li>Built endpoints to create and retrieve weight records, with validation and clear error responses.</li>
+            <li>Added a weight-entry form, latest-weight summary, and history table to the animal detail page.</li>
+            <li>Added readable dates and inline feedback so users can see whether an update succeeded.</li>
+          </ul>
+          <figure class="case-cover">
+            <img src="../farm-history.png" width="915" height="280" alt="FarmTracker weight-history feature with a latest-weight summary and a table of recorded measurements." loading="lazy">
+            <figcaption class="image-caption">Weight history connects the stored measurements to a readable interface.</figcaption>
+          </figure>
+        </section>
+        <section class="case-section" aria-labelledby="choices">
+          <p class="eyebrow">03 / Engineering choices</p>
+          <h2 id="choices">Protect the relationships between records.</h2>
+          <p>Moving an animal changes more than one value. The old paddock must lose an occupant, the new paddock must gain one, and the animal's assignment must stay consistent. I wrapped the relevant multi-step writes in SQLite transactions and added guards against invalid paddock references.</p>
+          <p>The weight endpoints validate input and distinguish missing animals from invalid measurements. Integration coverage includes successful writes, validation failures, missing records, and date ordering. The submission documents 17 of 17 tests passing.</p>
+          <p>I retained the application's existing stack and visual patterns. A focused assessment was a better place for clear, reviewable changes than a broad rewrite.</p>
+        </section>
+        <section class="case-section" aria-labelledby="learning">
+          <p class="eyebrow">04 / Reflection</p>
+          <h2 id="learning">Leave the next developer a clear path.</h2>
+          <p>Alongside the implementation, I documented the audit, architectural concerns, trade-offs, and follow-up work. My proposed next step was to move growing business logic out of route handlers and extend transaction coverage as the application evolves.</p>
+          <p>This project reflects how I approach an unfamiliar codebase: understand the existing behavior, prioritize the risk, make a focused change, and explain how it was checked.</p>
+        </section>
+      </article>
+    </div>
+    <section class="container case-next" aria-labelledby="next-project">
+      <p class="eyebrow">Keep exploring</p>
+      <h2 id="next-project">Small interactions. Everyday momentum.</h2>
+      <a class="button button-dark" href="microwins.html">Explore MicroWins <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner"><p>© <span data-year>2026</span> Blen Abebe</p><a class="text-link" href="mailto:blenkebede02@gmail.com">Let's talk <span aria-hidden="true">↗</span></a></div>
+  </footer>
+</body>
+</html>

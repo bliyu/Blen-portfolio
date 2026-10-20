@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf8f1">
+  <title>MicroWins — Blen Abebe</title>
+  <meta name="description" content="MicroWins is a team-built SwiftUI app for daily achievements, mood check-ins, streaks, and weekly reflection. Explore Blen Abebe's mobile development work.">
+  <link rel="canonical" href="https://bliyu.github.io/Blen-portfolio/projects/microwins.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body data-page="case-study">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Blen Abebe home">blen<span class="wordmark-dot">.</span></a>
+      <a class="text-link" href="../index.html#work">Back to selected work <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main" class="case-page" tabindex="-1">
+    <div class="container case-hero">
+      <p class="eyebrow">iOS application / Team project</p>
+      <h1 class="case-title">MicroWins<span class="wordmark-dot">.</span></h1>
+      <p class="case-intro">A little progress, every day. An iOS app built around achievable wins and reflection.</p>
+      <dl class="case-meta">
+        <div><dt>My role</dt><dd>Mobile development team member</dd></div>
+        <div><dt>Context</dt><dd>George Brown · Team 14</dd></div>
+        <div><dt>Built with</dt><dd>Swift · SwiftUI · MVVM · JSON</dd></div>
+      </dl>
+      <figure class="case-cover case-illustration">
+        <div class="phone-preview" role="img" aria-label="Illustrative MicroWins phone screen showing two completed daily wins and one remaining win. The illustration uses sample content.">
+          <div class="phone-speaker" aria-hidden="true"></div>
+          <div class="phone-topline" aria-hidden="true"><span>9:41</span><span>•••</span></div>
+          <span class="phone-label">MICROWINS</span>
+          <p class="phone-title">Small wins.<br><em>Big feelings.</em></p>
+          <div class="phone-progress"><span class="progress-flower" aria-hidden="true">✳</span><div><b>A little progress,<br>every day.</b><span>Make room for the good.</span></div></div>
+          <div class="phone-task"><span class="task-check" aria-hidden="true">✓</span><span>Take a moment for myself</span></div>
+          <div class="phone-task"><span class="task-check" aria-hidden="true">✓</span><span>Learn something new</span></div>
+          <div class="phone-task"><span class="task-empty" aria-hidden="true"></span><span>Celebrate a small win</span></div>
+          <div class="phone-nav" aria-hidden="true"><span>⌂</span><span>＋</span><span>◴</span></div>
+        </div>
+        <figcaption class="image-caption">Illustrative interface with sample content, showing the app's established features. See the repository for the SwiftUI implementation.</figcaption>
+      </figure>
+    </div>
+    <div class="container case-layout">
+      <aside class="case-sidebar" aria-label="Project details">
+        <p class="eyebrow">The focus</p>
+        <p>A manageable daily routine: add a small win, mark progress, and check in with yourself.</p>
+        <p class="eyebrow">Team 14</p>
+        <p>Blen Abebe<br>Shalev Haimovitz<br>Jonathan Ivanov<br>Melica Alikhani-Marqueti</p>
+        <a class="button button-dark" href="https://github.com/bliyu/MicroWins" target="_blank" rel="noopener noreferrer">View the repository <span aria-hidden="true">↗</span></a>
+      </aside>
+      <article class="case-body" aria-label="MicroWins case study">
+        <section class="case-section" aria-labelledby="context">
+          <p class="eyebrow">01 / The context</p>
+          <h2 id="context">Make the next step feel achievable.</h2>
+          <p>Large goals and long task lists can feel overwhelming. Our mobile development team built MicroWins around a smaller unit of progress: a daily achievement that a person can complete, acknowledge, and build on.</p>
+          <p>The app brings daily wins, mood check-ins, streaks, and weekly reflection into one focused iOS experience.</p>
+        </section>
+        <section class="case-section" aria-labelledby="contribution">
+          <p class="eyebrow">02 / Team contribution</p>
+          <h2 id="contribution">A complete everyday flow.</h2>
+          <p>I collaborated with a four-person team on interface design, SwiftUI implementation, navigation and logic, testing, and debugging. The resulting app supports:</p>
+          <ul>
+            <li>Adding, completing, reopening, and deleting daily wins.</li>
+            <li>Recording a mood for the day.</li>
+            <li>Viewing daily completion progress and a current streak.</li>
+            <li>Reviewing completed wins and progress across the week.</li>
+          </ul>
+          <p>The project is shared team work. The repository documents the contributors, application structure, and setup instructions.</p>
+        </section>
+        <section class="case-section" aria-labelledby="choices">
+          <p class="eyebrow">03 / Engineering choices</p>
+          <h2 id="choices">Keep state understandable.</h2>
+          <p>The app uses MVVM to separate stored data and app logic from the SwiftUI views. Models represent wins and mood entries, while <code>MicroWinsStore</code> manages state and persistence.</p>
+          <p><code>NavigationStack</code> and <code>TabView</code> connect the dashboard, list, mood, and summary screens. Local JSON files let the app load saved entries on launch and preserve changes without requiring a server or account.</p>
+          <p>That scope keeps the focus on the core experience: a small action should lead to a visible, saved change across the relevant screens.</p>
+        </section>
+        <section class="case-section" aria-labelledby="learning">
+          <p class="eyebrow">04 / What I took forward</p>
+          <h2 id="learning">Simple experiences still need careful engineering.</h2>
+          <p>A completion checkmark can affect today's count, a streak, and a weekly summary. This project strengthened my attention to shared state, reusable views, persistence, and consistent navigation.</p>
+          <p>It also gave me experience building within a team: aligning interfaces and data models, integrating changes, and testing the flow that connects everyone's work.</p>
+        </section>
+      </article>
+    </div>
+    <section class="container case-next" aria-labelledby="next-project">
+      <p class="eyebrow">Keep exploring</p>
+      <h2 id="next-project">A different kind of interaction.</h2>
+      <a class="button button-dark" href="rogue-paddle.html">Explore Rogue Paddle <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner"><p>© <span data-year>2026</span> Blen Abebe</p><a class="text-link" href="mailto:blenkebede02@gmail.com">Let's talk <span aria-hidden="true">↗</span></a></div>
+  </footer>
+</body>
+</html>

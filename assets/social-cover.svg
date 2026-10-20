@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fbf8f1"/>
+  <rect x="805" width="395" height="630" fill="#e6eadb"/>
+  <circle cx="1105" cy="295" r="245" fill="#f0d9c5"/>
+  <circle cx="1105" cy="295" r="200" fill="none" stroke="#ad492f" stroke-opacity=".3"/>
+  <circle cx="1105" cy="295" r="157" fill="none" stroke="#ad492f" stroke-opacity=".3"/>
+  <g stroke="#ad492f" stroke-width="21"><path d="M976 118v160M896 198h160M919 141l114 114M919 255l114-114"/></g>
+  <rect x="865" y="397" width="277" height="90" rx="12" fill="#f4ce82"/>
+  <text x="892" y="451" fill="#28352b" font-size="21" font-family="sans-serif" font-weight="700">Built with intention.</text>
+  <text x="76" y="111" fill="#28352b" font-size="42" font-family="sans-serif" font-weight="700" letter-spacing="-2">blen<tspan fill="#ad492f">.</tspan></text>
+  <text x="78" y="220" fill="#5c665b" font-size="14" font-family="sans-serif" font-weight="600" letter-spacing="2">SOFTWARE DEVELOPER · TORONTO</text>
+  <text x="71" y="319" fill="#28352b" font-size="76" font-family="sans-serif" font-weight="700" letter-spacing="-4">Thoughtful code.</text>
+  <text x="76" y="408" fill="#ad492f" font-size="80" font-family="serif" font-style="italic" letter-spacing="-3">Useful software.</text>
+  <text x="78" y="488" fill="#5c665b" font-size="19" font-family="sans-serif">Full-stack development. Automation. Mobile experiences.</text>
+  <line x1="78" y1="536" x2="720" y2="536" stroke="#dcded2"/>
+  <text x="78" y="573" fill="#28352b" font-size="15" font-family="sans-serif" font-weight="600">BLEN ABEBE</text>
+  <text x="454" y="573" fill="#5c665b" font-size="15" font-family="sans-serif">bliyu.github.io/Blen-portfolio</text>
+</svg>
